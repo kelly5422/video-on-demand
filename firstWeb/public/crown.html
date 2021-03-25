@@ -1,0 +1,146 @@
+<!DOCTYPE HTML>
+<!--
+	Massively by HTML5 UP
+	html5up.net | @ajlkn
+	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+-->
+<html>
+	<head>
+		<script src="http://cdn.dashjs.org/latest/dash.all.min.js"></script>
+		<title>Movie Theater</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+		<style>
+			video{
+				width:640px;
+				height:360px;
+			}
+		</style>
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper -->
+			<div id="wrapper">
+
+				<!-- Header -->
+					<header id="header">
+						<a href="index.html" class="logo">Enjoy</a>
+					</header>
+
+				<!-- Nav -->
+					<nav id="nav">
+						<ul class="links">
+							<li><a href="index.html">A Star is Born</a></li>
+							<li class="active"><a href="generic.html">The Crown</a></li>
+							<li><a href="kingsman.html">The King's Man</a></li>
+						</ul>
+						<ul class="icons">
+							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+							<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+							<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+							<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
+						</ul>
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Featured Post -->
+							<article class="post featured">
+								<header class="major">
+									<span class="date">November 4, 2016</span>
+									<h2><a href="#player">The Crown<br />
+									Season 1</a></h2>
+									<p>The Crown traces the life of Queen Elizabeth II from her wedding in 1947 through to the present day.<br />
+									The first season, in which Claire Foy portrays the Queen in the early part of her reign, depicts events up to 1955, <br />
+									with Winston Churchill resigning as prime minister and the Queen's sister Princess Margaret deciding not to marry Peter Townsend.</p>
+								</header>
+
+
+								
+								<div>
+									<video controls="true" id="videoPlayer" data-dashjs-player autoplay ></video>
+									<ul class="actions special">
+										<li><a onclick="getNew360Video()" class="button small">360p</a></li>
+										<li><a onclick="getNew480Video()" class="button small">480p</a></li>
+										<li><a onclick="getNew720Video()" class="button small">720p</a></li>
+									</ul>
+								</div>
+								
+								<script>
+									(function(){
+										var url = "crown/video720.mpd";
+										var player = dashjs.MediaPlayer().create();
+										player.initialize(document.querySelector("#videoPlayer"), url, true);
+									})();
+									
+									function getNew360Video(){
+										var url = "crown/video360.mpd";
+										var player = dashjs.MediaPlayer().create();
+										player.initialize(document.querySelector("#videoPlayer"), url, true);
+									}
+									
+									function getNew480Video(){
+										var url = "crown/video480.mpd";
+										var player = dashjs.MediaPlayer().create();
+										player.initialize(document.querySelector("#videoPlayer"), url, true);
+									}
+									
+									function getNew720Video(){
+										var url = "crown/video720.mpd";
+										var player = dashjs.MediaPlayer().create();
+										player.initialize(document.querySelector("#videoPlayer"), url, true);
+									}
+								</script>
+								
+								
+							</article>
+							
+						<!-- Posts -->	
+						<section class="posts">
+							<article>
+								<header>
+									<span class="date">October 9, 2018</span>
+									<h2><a href="index.html">A Star is Born</a></h2>
+								</header>
+								<a href="index.html" class="image fit"><img src="images/3.jpg" alt="" /></a>
+								<p>“There can be 100 people in a room and 99 of them don’t believe in you,but all it takes is one and it just changes your whole life.” – A Star is Born</p>
+								<ul class="actions special">
+									<li><a href="index.html" class="button">Link</a></li>
+								</ul>
+							</article>
+							<article>
+								<header>
+									<span class="date">December 13, 2014</span>
+									<h2><a href="kingsman.html">The King's man</a></h2>
+								</header>
+								<a href="kingsman.html" class="image fit"><img src="images/2.jpg" alt="" /></a>
+								<p>A spy organisation recruits a promising street kid into the agency's training program, while a global threat emerges from a twisted tech genius.</p>
+								<ul class="actions special">
+									<li><a href="kingsman.html" class="button">Link</a></li>
+								</ul>
+							</article>
+						</section>	
+
+					</div>
+
+				<!-- Copyright -->
+					<div id="copyright">
+						<ul><li>&copy; 1323lab Academic research only by Kelly</li></ul>
+					</div>
+
+			</div>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/jquery.scrollex.min.js"></script>
+			<script src="assets/js/jquery.scrolly.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+
+	</body>
+</html>

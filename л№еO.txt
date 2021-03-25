@@ -1,0 +1,14 @@
+Âàµe½è
+ ffmpeg -i .\one.mp4 -vcodec libx264 -an -qp 1 one_720p.mp4
+
+¤Ávideo seg
+mp4box -dash 2000 -bs-switching no -segment-name video$Number -out video720.mpd .\one_video.mp4
+
+¤Áaudio seg
+mp4box -dash 2000 -bs-switching no -segment-name audio$Number -out audio.mpd .\one_audio.mp4
+
+Remove the audio component
+ffmpeg -i video.mp4 -an mute-video.mp4
+
+Extract the audio from video
+ffmpeg -i myvideo.mp4 -vn -acodec copy audio.mp4
