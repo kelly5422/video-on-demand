@@ -1,2 +1,3 @@
 # video-on-demand
-final_project
+
+Please refer to final_project.pdf & demo.mp4
